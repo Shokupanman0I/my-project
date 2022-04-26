@@ -6,26 +6,26 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        
-          Learn React
-        </a>
+        <button onClick={badFunc}>BAD BUTTON</button>
       </header>
     </div>
   );
 }
 
+let badVar = false;
+let loopNum = 0;
 
-let badFunc = (badVar) => {
+let badFunc = () => {
 
-  consoleog(badVar)
+  if(!badVar)
+  {
+    console.log(`THE LOOP ${loopNum}`)
+    loopNum++
+    badFunc()
+  }
+  else{
+    return
+  }
 
 }
 
