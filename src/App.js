@@ -36,12 +36,15 @@ let callBackHell = () => {
   setTimeout(function() {
     console.log('getting worse');
     badState = "worse"
+    console.log(`State: ${badState}`)
     setTimeout(function() {
       console.log('oh no');
       badState = "even worse"
+      console.log(`State: ${badState}`)
       setTimeout(function() {
         console.log('AHHHHHHHHHHHHHHHHHHH');
         badState = "worst"
+        console.log(`State: ${badState}`)
       }, 2000);
     }, 2000);
   }, 2000);
